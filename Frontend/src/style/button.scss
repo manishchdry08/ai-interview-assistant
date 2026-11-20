@@ -14,8 +14,13 @@
         color: white;
     }
 
-    &:hover{
+    &:hover:not(:disabled){
         filter: brightness(1.08);
+    }
+
+    &:disabled{
+        cursor: not-allowed;
+        opacity: 0.6;
     }
 
     &:focus-visible{
