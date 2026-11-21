@@ -5,7 +5,6 @@ import Protected from "./features/auth/components/Protected";
 import Home from "./features/interview/pages/Home";
 import Interview from "./features/interview/pages/Interview";
 
-
 export const router = createBrowserRouter([
     {
         path: "/login",
@@ -20,7 +19,11 @@ export const router = createBrowserRouter([
         element: <Protected><Home /></Protected>
     },
     {
-        path:"/interview/:interviewId",
+        path: "/interview/:interviewId",
         element: <Protected><Interview /></Protected>
+    },
+    {
+        path: "*",
+        element: <h1>404 - Page Not Found</h1>
     }
-])
+]);
